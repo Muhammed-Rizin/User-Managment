@@ -1,0 +1,30 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link rel="stylesheet" href="/stylesheet/login.css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<title>Login</title>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Login -->
+    <div class="fadeIn first">
+      <h3 class="my-3"><strong>Login</strong></h3>
+    </div>
+
+    <!-- Login Form -->
+    <form method="post" action="/login">
+      <input type="text" id="login" class="fadeIn second" name="email" placeholder="Email">
+      <input type="text" id="password" class="fadeIn third" name="password" placeholder="Password">
+      <input type="submit" class="fadeIn fourth" value="Log in">
+    </form>
+
+    <!-- Sign Up -->
+    <div id="formFooter">
+      <a class="underlineHover text-white" href="/register">Sign Up?</a>
+    </div>
+
+  </div>
+</div>
