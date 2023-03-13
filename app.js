@@ -5,6 +5,8 @@ const app = express()
 const path = require('path')
 const session = require('express-session')
 const bodyParser =require('body-parser');
+const bcrypt = require('bcrypt')
+
 
 const userRoute = require('./Routes/userRoute')
 const adminRoute = require('./Routes/adminRoute')

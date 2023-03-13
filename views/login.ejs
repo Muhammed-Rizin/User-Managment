@@ -14,17 +14,23 @@
       <h3 class="my-3"><strong>Login</strong></h3>
     </div>
 
-    <!-- Login Form -->
-    <form method="post" action="/login">
-      <input type="text" id="login" class="fadeIn second" name="email" placeholder="Email">
-      <input type="text" id="password" class="fadeIn third" name="password" placeholder="Password">
-      <input type="submit" class="fadeIn fourth" value="Log in">
-    </form>
+    <% if(typeof message !=='undefined' ){ %>
+      <p style="color: red;"><%= message %></p>
+      <% } %>
+        <!-- Login Form -->
+        <form method="post" action="/login">
+          <input type="text" id="login" class="fadeIn second" name="email" placeholder="Email" required>
+          <p id="para1" style="color: red"></p>
+          <input type="text" id="password" class="fadeIn third" name="password" placeholder="Password" required>
+          <p id="para2" style="color: red"></p>
+          <input type="submit" onclick="show()" class="fadeIn fourth" value="Log in">
+        </form>
 
-    <!-- Sign Up -->
-    <div id="formFooter">
-      <a class="underlineHover text-white" href="/register">Sign Up?</a>
-    </div>
-
+        <!-- Sign Up -->
+        <div id="formFooter">
+          <a class="underlineHover text-white" href="/register">Sign Up?</a>
+        </div>
   </div>
 </div>
+
+<script src="/javaScript/userLogin.js"></script>

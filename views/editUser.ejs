@@ -21,34 +21,28 @@
         <section class="sign-in">
             <div class="container">
                 <div class="signin-content">
-                    <div class="signin-image">
-                        <figure><img src="/asset/admin signin.jpg" alt="sing up image"></figure>
-                    </div>
+                    
 
                     <div class="signin-form">
-                        <h2 class="form-title">Log-In</h2>
-
-                        <%
-                        if(typeof message !== "undefined"){
-                            %>
-                            <p style="color: red;"><%= message %></p>
-                            <%
-                        }
-                        %>
-
-                        <form method="POST" action="/admin" class="register-form" id="login-form">
+                        <h2 class="form-title">Edit User</h2>
+                        <form method="POST" action="/admin/edit" class="register-form" id="login-form">
                             <div class="form-group">
                                 <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="text" name="email" id="your_name" placeholder="email" required />
+                                <input type="name" name="name" id="your_name" placeholder="name" value="<%= user.name %>" required />
                                 <p id="para1" style="color: red"></p>
                             </div>
                             <div class="form-group">
                                 <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="password" name="password" id="your_pass" placeholder="Password" required />
+                                <input type="email" name="email" id="your_pass" placeholder="Email" value="<%= user.email %>" required />
                                 <p id="para2" style="color: red"></p>
                             </div>
+                            <div class="form-group">
+                                <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="hidden" name="id"  value="<%= user.id %>"  />
+                            </div>
                             <div class="form-group form-button">
-                                <input type="submit" name="signin" id="signin" class="form-submit" value="Log in" onclick="show()" />
+                                <input type="submit" name="signin" id="signin" class="form-submit" value="Update"
+                                    onclick="show()" />
                             </div>
                         </form>
                     </div>
@@ -60,7 +54,21 @@
 
     <!-- JS -->
     <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="/javaScript/adminLogin.js"></script>
+    <script>
+        function show() {
+            let name = document.getElementById("your_name").value;
+            let para1 = document.getElementById("para1")
+            if (name == "") {
+                para1.innerText = "Enter Name"
+            }
+
+            let email = document.getElementById("your_pass").value
+            let para2 = document.getElementById("para2")
+            if (email == "") {
+                para2.innerText = "Enter Email"
+            }
+        }
+    </script>
 </body>
 
 </html>
