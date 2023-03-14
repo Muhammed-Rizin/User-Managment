@@ -14,9 +14,15 @@
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid ms-5">
             <a class="navbar-brand">Admin</a>
-            <form class="d-flex me-5">
-                <button class="btn btn-outline-success" type="submit"><a href="/admin/Log_out">Log Out</a> </button>
-            </form>
+            <div class="d-flex">
+                <div class="d-flex justify-content-end me-5">
+                    <button class="btn btn-outline-secondary" type="submit"><a href="/admin/new">Add User</a> </button>
+                </div>
+                <form class="d-flex me-5">
+                    <button class="btn btn-outline-success" type="submit"><a href="/admin/Log_out">Log Out</a> </button>
+                </form>
+            </div>
+            
         </div>
     </nav>
 
@@ -24,9 +30,7 @@
         <input type="text" name="search" placeholder="Name" class="me-2">
         <input class="search-btn btn btn-secondary fa" type="submit" value="search"></input>
     </form>
-    <div class="d-flex justify-content-end me-5 mt-5">
-        <button class="btn btn-outline-secondary" type="submit"><a href="/admin/new">Add User</a> </button>
-    </div>
+    
 
     <table class="table align-middle mb-0 ">
         <thead class="">
