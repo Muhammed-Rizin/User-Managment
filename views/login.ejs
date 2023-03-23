@@ -5,32 +5,38 @@
 <title>Login</title>
 <!------ Include the above in your HEAD tag ---------->
 
-<div class="wrapper fadeInDown">
-  <div id="formContent">
-    <!-- Tabs Titles -->
+<section class="contact spad">
+  <div class="container">
+    <div class="wrapper fadeInDown">
+      <div id="formContent">
+        <!-- Tabs Titles -->
 
-    <!-- Login -->
-    <div class="fadeIn first">
-      <h3 class="my-3"><strong>Login</strong></h3>
-    </div>
-
-    <% if(typeof message !=='undefined' ){ %>
-      <p style="color: red;"><%= message %></p>
-      <% } %>
-        <!-- Login Form -->
-        <form method="post" action="/login">
-          <input type="text" id="login" class="fadeIn second" name="email" placeholder="Email" required>
-          <p id="para1" style="color: red"></p>
-          <input type="password" id="password" class="fadeIn third" name="password" placeholder="Password" required>
-          <p id="para2" style="color: red"></p>
-          <input type="submit" onclick="show()" class="fadeIn fourth" value="Log in">
-        </form>
-
-        <!-- Sign Up -->
-        <div id="formFooter">
-          <a class="underlineHover text-white" href="/register">Sign Up?</a>
+        <!-- Login -->
+        <div class="fadeIn first">
+          <h3 class="my-3"><strong>Login</strong></h3>
         </div>
+
+        <% if(typeof message !=='undefined' ){ %>
+          <p style="color: red;">
+            <%= message %>
+          </p>
+          <% } %>
+            <!-- Login Form -->
+            <form method="post" action="/login">
+              <input type="text" id="login" class="fadeIn second" name="email" placeholder="Email" required>
+              <p id="para1" style="color: red"></p>
+              <input type="password" id="password" class="fadeIn third" name="password" placeholder="Password" required>
+              <p id="para2" style="color: red"></p>
+              <input type="submit" onclick="show()" class="fadeIn fourth" value="Log in">
+            </form>
+
+            <!-- Sign Up -->
+            <div id="formFooter">
+              <a class="underlineHover text-white" href="/register">Sign Up?</a>
+            </div>
+      </div>
+    </div>
   </div>
-</div>
+</section>
 
 <script src="/javaScript/userLogin.js"></script>

@@ -9,7 +9,7 @@ function show(){
 
     let password = document.getElementById("password").value
     let para2 = document.getElementById("para2")
-    if(password==""){
+    if(password.length <= 8){
         para2.innerText = "Enter Password"
     }else{
         para2.innerText = null
